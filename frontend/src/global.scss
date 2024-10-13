@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100lvw;
+  height: 100lvh;
+  overflow-x: hidden;
+  max-height: 100lvh;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+input {
+  outline: none;
+  border: none;
+}
+button {
+  border: none;
+  background: none;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+ul {
+  list-style: none;
+}
+body {
+  background-color: #171821;
+}
+button {
+  cursor: pointer;
+}
+.page {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}

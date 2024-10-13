@@ -1,0 +1,93 @@
+.login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    &__confirm{
+        border: 2px solid black;
+        padding: 10px 40px;
+        cursor: pointer;
+        font-size: 16px;
+        &:hover{
+            background: black;
+            color: white;
+        }
+    }
+    &__buttons{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        button{
+            padding: 4px 6px;
+            border: 1px solid black;
+            border-radius: 10px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+    }
+
+    &__form{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 20%;
+        border: 2px solid grey;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: #404253;
+        
+    }
+    &__input-block{
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        input{
+            padding: 10px 0px 10px 10px;
+            border: 2px solid black;
+            outline: 3px solid transparent;
+            transition: .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+            width: 100%;
+            &:focus{
+                outline: 3px solid rgb(49, 49, 49);
+                border-radius: 5px; 
+            }
+            &:focus + label{
+                transform: translateY(-100%);
+            }
+            &.error{
+                border: 2px solid red;
+            }
+        }
+        label{
+            position: absolute;
+            color: grey;
+            margin-left: 11px;
+            background: white;
+            padding: 0 8px 0 8px;
+            cursor: text;
+            transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            &.active{
+                transform: translateY(-100%);
+            }
+        }
+    }
+    &__error{
+        color: red;
+        position: absolute;
+        opacity: 0;
+        transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    &__error.active{
+       opacity: 1;
+        transform: translateY(150%);
+           
+        
+    }
+    
+}
